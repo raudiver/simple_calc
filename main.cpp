@@ -26,10 +26,10 @@ int main ()
             cout << "Difference is " << razn << "\n";
     } else if (c == 3) {
             pow = a1 * a2;
-            cout << pow;
+            cout << "Product is " << pow << "\n";
     } else if (c == 4) {
             div = a1 / a2;
-            cout << div;
+            cout << "Quotient is " << div << "\n";
     }
     goto begin;
     return 0;
