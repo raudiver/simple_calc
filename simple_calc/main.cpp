@@ -2,9 +2,13 @@
 
 int main ()
 {
-    int operationtype; // "c" will be used for setting action
-    double a1, a2; // a1 - first numer, a2 second number
-    double sum, razn, pow, div; //results of operations
+    int operationtype(0); // "c" will be used for setting action
+    double a1(0.0); // a1 - first number
+    double a2(0.0); // a2 - first number
+    double sum(0.0); //results of operations sum
+    double razn(0.0); // results of operation subtraction
+    double pow(0.0); // results of operation multiplication
+    double div(0.0); // results of operation division
     std::cout << "First calculator!!!" << std::endl;
     begin: // cykling programm from this point
     std::cout << "Choose action:" << std::endl << "Enter 1 for +" << std::endl << "Enter 2 for -" << std::endl << "Enter 3 for *" << std::endl << "Enter 4 for / " << std::endl;
