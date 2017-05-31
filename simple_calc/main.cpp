@@ -10,30 +10,40 @@ int main ()
     double pow(0.0); // results of operation multiplication
     double div(0.0); // results of operation division
     std::cout << "First calculator!!!" << std::endl;
-    begin: // cykling programm from this point
     std::cout << "Choose action:" << std::endl << "Enter 1 for +" << std::endl << "Enter 2 for -" << std::endl << "Enter 3 for *" << std::endl << "Enter 4 for / " << std::endl;
     std::cin >> operationtype;
-    if ((operationtype<1) || (operationtype>4)) { // In case when user select wrong action programm will start from beginning with info message
-            std::cout << "Entered wrong action!" << std::endl;
-            goto begin;
-    }
     std::cout << "Enter first number." << std::endl;
     std::cin >> a1;
     std::cout << "Eenter second number." << std::endl;
     std::cin >> a2;
-    if (operationtype == 1) {
-            sum = a1 + a2;
-            std::cout << "Sum is " << sum << std::endl;
-    } else if (operationtype == 2) {
-            razn = a1 - a2;
-            std::cout << "Difference is " << razn << std::endl;
-    } else if (operationtype == 3) {
-            pow = a1 * a2;
-            std::cout << "Product is " << pow << std::endl;
-    } else if (operationtype == 4) {
-            div = a1 / a2;
-            std::cout << "Quotient is " << div << std::endl;
+    switch (operationtype) {
+    case 1:
+        {
+        sum = a1 + a2;
+        std::cout << "Sum is " << sum << std::endl;
+        break;
+        }
+    case 2:
+        {
+        razn = a1 - a2;
+        std::cout << "Difference is " << razn << std::endl;
+        break;
+        }
+    case 3:
+        {
+        pow = a1 * a2;
+        std::cout << "Product is " << pow << std::endl;
+        break;
+        }
+    case 4:
+        {
+        div = a1 / a2;
+        std::cout << "Quotient is " << div << std::endl;
+        break;
+        }
+    default:
+        std::cout << "Entered wrong action!" << std::endl;
+        break;
     }
-    goto begin;
     return 0;
 }
